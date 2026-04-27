@@ -1,0 +1,198 @@
+/* الإعدادات العامة والمتغيرات */
+:root {
+    --brand-primary: #6366f1;   /* Indigo */
+    --brand-secondary: #4f46e5;
+    --brand-accent: #10b981;    /* Emerald */
+    --bg-main: #f8fafc;
+    --text-main: #1e293b;
+    --card-bg: #ffffff;
+    --footer-bg: #222f3e;
+    --card-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    --transition: all 0.4s ease;
+}
+
+/* إعدادات الوضع المظلم - تم تعديلها لتشمل الخلفية بالكامل */
+body.dark-mode-active {
+    --bg-main: #0f172a;       /* كحلي غامق جداً */
+    --text-main: #f8fafc;     /* نص فاتح */
+    --card-bg: #1e293b;       /* كروت أفتح قليلاً من الخلفية */
+    --footer-bg: #020617;
+}
+body.dark-mode-active .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid #334155;
+}
+
+body.dark-mode-active .form-control, 
+body.dark-mode-active .form-select {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: white;
+}
+
+body.dark-mode-active .form-control:focus {
+    background-color: #0f172a;
+    color: white;
+    border-color: var(--brand-primary);
+}
+body.dark-mode-active #registrationForm button {
+    background-color: #0f172a;
+    color: white;
+    border-color: var(--brand-primary);
+}
+body.dark-mode-active .breadcrumb-item a {
+    color: #94a3b8;
+}
+
+body.dark-mode-active .breadcrumb-item.active {
+    color: #f8fafc;
+}
+body.dark-mode-active .bg-light {
+    background-color: #1e293b !important;
+    color: #f8fafc;
+}
+
+body.dark-mode-active .team-card h5 {
+    color: #f8fafc;
+}
+
+body.dark-mode-active .card-item p {
+    color: #f8fafc !important;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: var(--transition);
+    overflow-x: hidden;
+}
+
+/* الترويسة (Navbar) */
+.morshed-nav {
+    background: linear-gradient(135deg, var(--brand-primary), #341f97) !important;
+    padding: 0.8rem 0;
+}
+
+/* السلايدر */
+.hero-img {
+    height: 600px;
+    object-fit: cover;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+.modal-header{
+    background-color: var(--brand-secondary);
+}
+/* أزرار التصنيفات */
+.category-btn {
+    border: 2px solid #e2e8f0;
+    background: var(--card-bg);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-btn:hover, .category-btn.active {
+    background: var(--brand-primary);
+    color: white;
+    border-color: var(--brand-primary);
+    transform: translateY(-3px);
+}
+
+/* الكروت */
+.event-item-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 20px;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.event-item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-shadow);
+}
+
+/* سهم الصعود للأعلى */
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    display: none; /* يتم التحكم به عبر JS */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background: var(--brand-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+
+/* تحسين شكل المسار (Breadcrumb) */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+
+/* تأثير التكبير لصور المعرض */
+.event-gallery img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 200px;
+}
+
+.event-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* كلاس مخصص لجعل المعلومات تتبع المستخدم عند التمرير (Sticky) */
+@media (min-width: 992px) {
+    .sticky-top {
+        z-index: 1;
+    }
+}
+
+/* تنسيق قسم الـ Hero في صفحة About */
+.bg-primary {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%) !important;
+}
+
+/* تأثير عند التمرير على كروت الفريق */
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* نمط الحدود المقطعة  */
+.border-dashed {
+    border-style: dashed !important;
+}
+
+
+/* التذييل */
+.morshed-footer {
+    background-color: var(--footer-bg);
+    padding: 50px 0 20px;
+    transition: var(--transition);
+}
+
+.bg-soft-primary { background-color: rgba(99, 102, 241, 0.1); }
+.text-accent { color: var(--brand-accent); }
